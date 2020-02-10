@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mydsl -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="mydsl.presentation.MydslModelWizardID"
+            name="%_UI_MydslModelWizard_label"
+            class="mydsl.presentation.MydslModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MydslModelFile.gif">
+         <description>%_UI_MydslModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mydsl -->
+      <editor
+            id="mydsl.presentation.MydslEditorID"
+            name="%_UI_MydslEditor_label"
+            icon="icons/full/obj16/MydslModelFile.gif"
+            extensions="mydsl"
+            class="mydsl.presentation.MydslEditor"
+            contributorClass="mydsl.presentation.MydslActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
